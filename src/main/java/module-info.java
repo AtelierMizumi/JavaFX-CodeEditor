@@ -5,6 +5,7 @@ module com.editor.texteditor {
     requires org.fxmisc.richtext;
     requires org.fxmisc.flowless;
     requires java.logging;
+    requires reactfx;
 
 
     opens com.editor.texteditor to javafx.fxml;

@@ -23,7 +23,7 @@ public class SyntaxUtils {
     };
 
     public static final List<String> KEYWORDS_lIST = new ArrayList<>();
-    public static final HashMap<String,String> CLASSES_LIST = new HashMap<>();
+    public static final HashMap<String, String> CLASSES_LIST = new HashMap<>();
 
     private static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
     private static final String PAREN_PATTERN = "\\(|\\)";
@@ -59,11 +59,11 @@ public class SyntaxUtils {
                     + "|(?<METHOD>" + METHOD_PATTERN + ")"
     );
 
-    public static StyleSpans<Collection<String>> computeHighlighting(String newText, String language) {
+    public static StyleSpans<Collection<String>> computeHighlighting(String newText) {
         Matcher matcher = PATTERN.matcher(newText);
         int lastKwEnd = 0;
         StyleSpansBuilder<Collection<String>> spansBuilder = new StyleSpansBuilder<>();
-        while(matcher.find()) {
+        while (matcher.find()) {
             String styleClass =
                     matcher.group("KEYWORD") != null ? "keyword" :
                     matcher.group("PAREN") != null ? "paren" :

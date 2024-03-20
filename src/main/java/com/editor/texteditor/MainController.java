@@ -26,7 +26,7 @@ public class MainController {
     public void initialize() {
         CodeEditor codeEditor = new CodeEditor();
 
-        File rootDirectory = new File("/home/thuanc177");
+        File rootDirectory = new File("/home/thuanc177/Documents");
         DirectoryTreeBuilder directoryTreeBuilder = new DirectoryTreeBuilder();
         TreeItem<String> rootNode = directoryTreeBuilder.createNode(rootDirectory);
         directoryTree.setRoot(rootNode);

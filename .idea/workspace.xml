@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="init project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/FileIconProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Source.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/styles/editor_style/editor_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoCommenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoImport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/Keywords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/PunctuationComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SpaceSensors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SyntaxUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DialogUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DirectoryTreeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/OSValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/TerminalUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/extension-icons/text-file-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="Added TabPane and spawner for multi-tab editing, added basic read-write operation">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-light.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/TerminalEmulator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/styles/editor_style/editor_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SyntaxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SyntaxUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" afterDir="false" />
     </list>
@@ -41,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,28 +47,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.editor.texteditor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/editor/texteditor/styles" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.editor.texteditor" />
     </key>
   </component>
@@ -99,7 +94,10 @@
       <workItem from="1710786037647" duration="1894000" />
       <workItem from="1710826379419" duration="1224000" />
       <workItem from="1710829891285" duration="2632000" />
-      <workItem from="1710852644145" duration="13122000" />
+      <workItem from="1710852644145" duration="13478000" />
+      <workItem from="1710868123970" duration="7000" />
+      <workItem from="1710899280194" duration="1363000" />
+      <workItem from="1710900672745" duration="3580000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -109,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710779261391</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added TabPane and spawner for multi-tab editing, added basic read-write operation">
+      <option name="closed" value="true" />
+      <created>1710867841332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710867841332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project" />
+    <MESSAGE value="Added TabPane and spawner for multi-tab editing, added basic read-write operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TabPane and spawner for multi-tab editing, added basic read-write operation" />
   </component>
 </project>

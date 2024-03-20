@@ -1,0 +1,74 @@
+.root {
+    -fx-font-size: 12pt;
+    -fx-background-color: #1e2030;
+}
+
+.text {
+    -fx-fill: #cad3f5;
+}
+
+.comment {
+    -fx-fill: #24273a;
+    -fx-font-style: italic;
+}
+
+.keyword {
+    -fx-fill: #f4dbd6;
+}
+
+.paren {
+    -fx-fill: #f0c6c6;
+}
+
+.brace {
+    -fx-fill: #f5bde6;
+}
+
+.bracket {
+    -fx-fill: #c6a0f6;
+}
+
+.semicolon {
+    -fx-fill: #ed8796;
+}
+
+.string {
+    -fx-fill: #ee99a0;
+}
+
+.comment {
+    -fx-fill: #f5a97f;
+    -fx-font-style: italic;
+}
+
+.method {
+    -fx-fill: #eed49f;
+}
+
+.number {
+    -fx-fill: #a6da95;
+}
+
+.operation {
+    -fx-fill: #8bd5ca;
+}
+
+.annotation {
+    -fx-fill: #91d7e3;
+}
+
+.cast {
+    -fx-fill: #7dc4e4;
+}
+
+.hex {
+    -fx-fill: #8aadf4;
+}
+
+.todo {
+    -fx-fill: #b7bdf8;
+}
+
+.warn {
+    -fx-fill: #cad3f5;
+}

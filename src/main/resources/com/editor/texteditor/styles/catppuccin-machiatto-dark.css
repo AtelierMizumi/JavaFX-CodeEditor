@@ -1,0 +1,98 @@
+.root, TreeView, CodeEditor {
+    -fx-font-size: 12pt;
+    -fx-background-color: #1e2030;
+}
+
+.code-editor, .lineno, .tree-cell, .tab, .tab-label {
+    -fx-background-color: #1e2030;
+    -fx-text-fill: #cad3f5;
+}
+
+.menu-bar {
+    -fx-background-color: #1e2030;
+}
+
+.menu-bar .menu {
+    -fx-background-color: #1e2030;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #cad3f5;
+}
+
+.menu-bar .menu-item {
+    -fx-background-color: #1e2030;
+}
+
+.menu-bar .menu-item .label {
+    -fx-text-fill: #cad3f5;
+}
+
+.caret {
+    -fx-stroke: #cad3f5;
+}
+
+.text {
+    -fx-fill: #cad3f5;
+}
+
+.keyword {
+    -fx-fill: #c6a0f6;
+}
+
+.paren {
+    -fx-fill: #ed8796;
+}
+
+.brace {
+    -fx-fill: #ed8796;
+}
+
+.bracket {
+    -fx-fill: #ed8796;
+}
+
+.semicolon {
+    -fx-fill: #a5adcb;
+}
+
+.string {
+    -fx-fill: #a6da95;
+}
+
+.comment {
+    -fx-fill: #494d64;
+    -fx-font-style: italic;
+}
+
+.method {
+    -fx-fill: #91d7e3;
+}
+
+.number {
+    -fx-fill: #f5a97f;
+}
+
+.operation {
+    -fx-fill: #8bd5ca;
+}
+
+.annotation {
+    -fx-fill: #91d7e3;
+}
+
+.cast {
+    -fx-fill: #7dc4e4;
+}
+
+.hex {
+    -fx-fill: #8aadf4;
+}
+
+.todo {
+    -fx-fill: #b7bdf8;
+}
+
+.warn {
+    -fx-fill: #e78284;
+}
