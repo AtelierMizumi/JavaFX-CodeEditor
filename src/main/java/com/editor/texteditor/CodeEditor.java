@@ -1,6 +1,6 @@
 package com.editor.texteditor;
 
-import com.editor.texteditor.syntax.SyntaxUtils;
+import com.editor.texteditor.syntax.AutoComplete;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -9,14 +9,14 @@ import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
-import org.fxmisc.richtext.model.StyleSpansBuilder;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 import static com.editor.texteditor.syntax.SyntaxUtils.computeHighlighting;
 import static javafx.geometry.Pos.CENTER_LEFT;
@@ -27,6 +27,8 @@ public class CodeEditor extends CodeArea {
         this.richChanges().filter(ch -> !ch.getInserted().equals(ch.getRemoved())).subscribe(change -> {
             this.setStyleSpans(0, computeHighlighting(this.getText()));
         });
+        // auto complete
+
     }
     public void openFileInNewTab(Path filePath, TabPane codeEditorTabPane) {
         // check if the file is already opened
@@ -54,7 +56,7 @@ public class CodeEditor extends CodeArea {
             e.printStackTrace();
         }
     };
-    private void applySyntaxHighlighting(CodeArea codeArea, String fileExtension) {
+    private void applySyntaxHighlighting(CodeEditor codeArea, String fileExtension) {
         System.out.println("File extension: " + fileExtension);
         Map<String, Runnable> syntaxHighlightingStrategies = new HashMap<>();
         syntaxHighlightingStrategies.put("java", () -> applySyntaxHighlightingWithUtils(codeArea, "java"));
@@ -216,13 +218,46 @@ public class CodeEditor extends CodeArea {
         // ... add more languages as needed
     }};
 
-    private void applySyntaxHighlightingWithUtils(CodeArea codeArea, String language) {
+    private void setupAutoCompletion(CodeEditor codeArea, String language) {
+        AutoComplete autoComplete = new AutoComplete(codeArea);
+        codeArea.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            switch (event.getCode()) {
+                case TAB:
+                    event.consume();
+                    break;
+                case ENTER:
+                    autoComplete.getListView().setVisible(false);
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+
+    private void applySyntaxHighlightingWithUtils(CodeEditor codeArea, String language) {
         String[] keywordsForLanguage = KEYWORDS.getOrDefault(language, KEYWORDS.get("default"));
         if (keywordsForLanguage != null) {
             codeArea.textProperty().addListener((obs, oldText, newText) -> {
                 StyleSpans<Collection<String>> highlighting = computeHighlighting(newText);
                 codeArea.setStyleSpans(0, highlighting);
             });
+            setupAutoCompletion(codeArea, language);
         }
+    }
+
+    public String getCurrentWord() {
+        int caretPosition = this.getCaretPosition();
+        String text = this.getText();
+        int start = caretPosition;
+        while (start > 0 && !Character.isWhitespace(text.charAt(start - 1))) {
+            start--;
+        }
+        return text.substring(start, caretPosition);
+    }
+
+    public int getCurrentWordLength() {
+        int caretPosition = (int) this.getScene().getWindow().getX();
+        int lastSpace = this.getText().substring(0, caretPosition).lastIndexOf(" ");
+        return caretPosition - lastSpace;
     }
 }

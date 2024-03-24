@@ -5,28 +5,25 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.TreeView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.editor.texteditor.MainController">
    <center>
-      <SplitPane orientation="VERTICAL">
+      <SplitPane dividerPositions="0.6557734204793029" orientation="VERTICAL" prefHeight="900.0" prefWidth="1920.0">
          <items>
-            <SplitPane dividerPositions="0.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <SplitPane dividerPositions="0.4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1920.0">
               <items>
-                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="900" prefWidth="500">
-                     <children>
-                        <TreeView fx:id="directoryTree" maxHeight="-Infinity" maxWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800" prefWidth="1200.0">
-                     <children>
-                        <TabPane fx:id="codeEditorTabPane" layoutX="590.0" layoutY="236.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
+                  <TreeView fx:id="directoryTree" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                  <TabPane id="#codeEditorTabPane" fx:id="codeEditorTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@styles/catppuccin-machiatto-dark.css" tabClosingPolicy="UNAVAILABLE" />
               </items>
             </SplitPane>
+            <TitledPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Terminal Emulator">
+               <content>
+                  <TabPane fx:id="terminalTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" />
+               </content>
+            </TitledPane>
          </items>
       </SplitPane>
    </center>
@@ -52,7 +49,4 @@
         </menus>
       </MenuBar>
    </top>
-   <bottom>
-      <TabPane fx:id="terminalTabPane" prefHeight="300.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" />
-   </bottom>
 </BorderPane>

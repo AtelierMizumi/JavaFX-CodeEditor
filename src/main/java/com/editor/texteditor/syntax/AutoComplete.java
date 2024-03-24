@@ -1,39 +1,53 @@
 package com.editor.texteditor.syntax;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 import org.fxmisc.richtext.CodeArea;
 
+import com.editor.texteditor.CodeEditor;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class AutoComplete {
+    private final ListView<String> listView = new ListView<>();
+    private final List<String> suggestions = FXCollections.observableArrayList();
 
-    private static final int LIST_ITEM_HEIGHT = 30;
-    private static final int LIST_MAX_HEIGHT = 120;
-    private static final int WORD_LENGTH_LIMIT = 45;
+    public AutoComplete(CodeEditor codeArea) {
+        listView.setPrefWidth(200);
+        listView.setPrefHeight(200);
+        listView.setStyle("-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-family: 'Fira Code';");
+        listView.setOnMouseClicked(event -> {
+            if (listView.getSelectionModel().getSelectedItem() != null) {
+                String selected = listView.getSelectionModel().getSelectedItem();
+                int currentWordLength = codeArea.getCurrentWord().length();
+                codeArea.replaceText(codeArea.getCaretPosition() - currentWordLength, codeArea.getCaretPosition(), selected);
+                listView.setVisible(false);
+            }
+        });
 
-    public static String getQuery(CodeArea codeArea, int position) {
-        int limit = Math.min(position, WORD_LENGTH_LIMIT);
-        String keywords = codeArea.getText().substring(position - limit, position);
-        keywords = keywords.replaceAll("\\p{Punct}", " ").trim();
-        keywords = keywords.replaceAll("\\n", " ").trim();
-        int last = keywords.lastIndexOf(" ");
-        return keywords.substring(last + 1);
+        codeArea.caretPositionProperty().addListener((observable, oldValue, newValue) -> {
+            if (!codeArea.getText().isEmpty()) {
+                String currentWord = codeArea.getCurrentWord();
+                if (currentWord.length() > 0) {
+                    suggestions.clear();
+                    suggestions.addAll(SyntaxUtils.KEYWORDS_lIST.stream().filter(s -> s.startsWith(currentWord)).collect(Collectors.toList()));
+                    listView.setItems((ObservableList<String>) suggestions);
+                    if (suggestions.size() > 0) {
+                        listView.setVisible(true);
+                    } else {
+                        listView.setVisible(false);
+                    }
+                } else {
+                    listView.setVisible(false);
+                }
+            } else {
+                listView.setVisible(false);
+            }
+        });
     }
 
-    public static ListView getSuggestionsList(String query){
-        List<String> suggestions = getQuerySuggestions(query);
-        ListView suggestionsList = new ListView<>();
-        suggestionsList.getItems().clear();
-        suggestionsList.getItems().addAll(FXCollections.observableList(suggestions));
-        int suggestionsNum = suggestions.size();
-        int listViewLength = Math.min((suggestionsNum * LIST_ITEM_HEIGHT), LIST_MAX_HEIGHT);
-        suggestionsList.setPrefHeight(listViewLength);
-        return suggestionsList;
-    }
-
-    private static List<String> getQuerySuggestions(String query) {
-        return SyntaxUtils.KEYWORDS_lIST.parallelStream().filter(keyword -> keyword.startsWith(query)).collect(Collectors.toList());
+    public ListView<String> getListView() {
+        return listView;
     }
 }

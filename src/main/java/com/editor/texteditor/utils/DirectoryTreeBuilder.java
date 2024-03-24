@@ -10,14 +10,19 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class DirectoryTreeBuilder {
-    public TreeItem<String> createNode(final File file) {
-        return new TreeItem<>(file.getAbsolutePath()) {
+    public TreeItem<File> createNode(final File file) {
+
+        return new TreeItem<>(file) {
             private boolean isLeaf;
             private boolean isFirstTimeChildren = true;
             private boolean isFirstTimeLeaf = true;
+            @Override
+            public String toString(){
+                return file.getName();
+            }
 
             @Override
-            public ObservableList<TreeItem<String>> getChildren() {
+            public ObservableList<TreeItem<File>> getChildren() {
                 if (isFirstTimeChildren) {
                     isFirstTimeChildren = false;
                     try {
@@ -38,15 +43,16 @@ public class DirectoryTreeBuilder {
                 return isLeaf;
             }
 
-            private CompletableFuture<ObservableList<TreeItem<String>>> buildChildren(TreeItem<String> treeItem) {
+
+            private CompletableFuture<ObservableList<TreeItem<File>>> buildChildren(TreeItem<File> treeItem) {
                 return CompletableFuture.supplyAsync(() -> {
-                    File f = new File(file.getPath());
+                    File f = treeItem.getValue();
                     if (f.isDirectory()) {
                         File[] files = f.listFiles();
                         if (files != null) {
                             // Sort the files array alphabetically
                             Arrays.sort(files, Comparator.comparing(File::getName));
-                            ObservableList<TreeItem<String>> children = FXCollections.observableArrayList();
+                            ObservableList<TreeItem<File>> children = FXCollections.observableArrayList();
                             for (File childFile : files) {
                                 children.add(createNode(childFile));
                             }

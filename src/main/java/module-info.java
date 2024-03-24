@@ -6,7 +6,10 @@ module com.editor.texteditor {
     requires org.fxmisc.flowless;
     requires java.logging;
     requires reactfx;
-
+    requires com.kodedu.terminalfx;
+    requires org.slf4j;
+    requires com.sun.jna;
+    requires pty4j;
 
     opens com.editor.texteditor to javafx.fxml;
     exports com.editor.texteditor;

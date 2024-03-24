@@ -3,6 +3,27 @@
     -fx-background-color: #1e2030;
 }
 
+.Pane, .AnchorPane, .StackPane, .FlowPane, .BorderPane, .GridPane, .HBox, .VBox {
+    -fx-background-color: #494d64;
+}
+
+#codeEditorTabPane .tab-pane {
+    -fx-background-image: url('/com/editor/texteditor/background.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.scroll-bar {
+    -fx-background-color: #1e2030;
+    -fx-pref-width: 15px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #cad3f5;
+    -fx-background-radius: 8px;
+}
+
 .code-editor, .lineno, .tree-cell, .tab, .tab-label {
     -fx-background-color: #1e2030;
     -fx-text-fill: #cad3f5;
