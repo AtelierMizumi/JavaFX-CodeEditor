@@ -4,19 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="added code highlighting and simple css structure for styling with custom theme">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/blue-archive.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/marisa-fumo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/saori.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/shiroko.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/views/main-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoComplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DirectoryTreeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DirectoryTreeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/TerminalUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/CodeEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/FileIconProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoCommenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoCommenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoImport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/Keywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/Keywords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/PunctuationComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/PunctuationComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SpaceSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/SpaceSensors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SyntaxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/SyntaxUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DialogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/DialogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DirectoryTreeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/DirectoryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/OSValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/OSValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/extension-icons/text-file-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/java.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/styles/catppuccin-machiatto-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/styles/catppuccin-machiatto-light.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +59,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -48,54 +76,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/thuanc177/.m2/repository/com/jetbrains/JediTerm/JediTerm-3.41-SNAPSHOT.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/thuanc177/IdeaProjects/TextEditor/src/main/resources/com/editor/texteditor/assets&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.editor.texteditor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/extension-icons" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/views" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles" />
       <recent name="$PROJECT_DIR$/src/main/java/com/editor/texteditor/styles" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.editor.texteditor" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.editor.texteditor.MainApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.editor.texteditor.Main" />
       <module name="TextEditor" />
       <option name="PROGRAM_PARAMETERS" value="--add-modules=javafx.controls,javafx.graphics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.editor.texteditor.*" />
+          <option name="PATTERN" value="com.editor.texteditor.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApplication" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +162,9 @@
       <workItem from="1711261614021" duration="4754000" />
       <workItem from="1711269438377" duration="5838000" />
       <workItem from="1711293549061" duration="3919000" />
-      <workItem from="1711297521243" duration="1436000" />
+      <workItem from="1711297521243" duration="6583000" />
+      <workItem from="1711346866905" duration="5853000" />
+      <workItem from="1711954415025" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -156,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710904373941</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible">
+      <option name="closed" value="true" />
+      <created>1711299374436</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711299374436</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +220,7 @@
     <MESSAGE value="init project" />
     <MESSAGE value="Added TabPane and spawner for multi-tab editing, added basic read-write operation" />
     <MESSAGE value="added code highlighting and simple css structure for styling with custom theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="added code highlighting and simple css structure for styling with custom theme" />
+    <MESSAGE value="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible" />
   </component>
 </project>

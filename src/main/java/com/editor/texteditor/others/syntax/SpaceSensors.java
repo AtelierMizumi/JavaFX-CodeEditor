@@ -1,4 +1,4 @@
-package com.editor.texteditor.syntax;
+package com.editor.texteditor.others.syntax;
 
 import org.fxmisc.richtext.CodeArea;
 

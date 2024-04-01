@@ -1,11 +1,10 @@
-package com.editor.texteditor.syntax;
+package com.editor.texteditor.others.syntax;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
-import org.fxmisc.richtext.CodeArea;
 
-import com.editor.texteditor.CodeEditor;
+import com.editor.texteditor.models.CodeEditor;
 import java.util.List;
 import java.util.stream.Collectors;
 

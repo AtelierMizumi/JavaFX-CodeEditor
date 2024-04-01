@@ -1,20 +1,18 @@
-package com.editor.texteditor;
+package com.editor.texteditor.controllers;
 
-import com.editor.texteditor.utils.DirectoryTreeBuilder;
-import com.kodedu.terminalfx.TerminalBuilder;
-import com.kodedu.terminalfx.TerminalTab;
-import com.kodedu.terminalfx.config.TerminalConfig;
+import com.editor.texteditor.models.CodeEditor;
+import com.editor.texteditor.models.DirectoryTree;
 import javafx.fxml.FXML;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TreeCell;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
 public class MainController {
     @FXML
     private TreeView<File> directoryTree;
@@ -29,11 +27,11 @@ public class MainController {
         CodeEditor codeEditor = new CodeEditor();
 
         File rootDirectory = new File("/home/thuanc177/Documents");
-        DirectoryTreeBuilder directoryTreeBuilder = new DirectoryTreeBuilder();
-        TreeItem<File> rootNode = directoryTreeBuilder.createNode(rootDirectory);
-        directoryTree.setRoot(rootNode);
+        DirectoryTree directoryTree = new DirectoryTree();
+        TreeItem<File> rootNode = directoryTree.createNode(rootDirectory);
+        this.directoryTree.setRoot(rootNode);
 
-        directoryTree.setCellFactory(tv -> new TreeCell<>() {
+        this.directoryTree.setCellFactory(tv -> new TreeCell<>() {
             @Override
             protected void updateItem(File item, boolean empty) {
                 super.updateItem(item, empty);
@@ -41,10 +39,10 @@ public class MainController {
             }
         });
 
-        directoryTree.setOnMouseClicked(event -> {
+        this.directoryTree.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) { // double-click
                 System.out.println("Double-clicked on the directory tree");
-                TreeItem<File> selectedItem = directoryTree.getSelectionModel().getSelectedItem();
+                TreeItem<File> selectedItem = this.directoryTree.getSelectionModel().getSelectedItem();
                 if (selectedItem != null) {
                     File selectedFile = new File(String.valueOf(selectedItem.getValue()));
                     System.out.println("Selected file: " + selectedFile.getAbsolutePath());
@@ -57,18 +55,18 @@ public class MainController {
             }
         });
 
-        TerminalConfig darkConfig = new TerminalConfig();
-        darkConfig.setBackgroundColor(Color.rgb(30, 32, 48));
-        darkConfig.setForegroundColor(Color.rgb(230, 248, 255));
-        darkConfig.setCursorColor(Color.rgb(230, 45, 80));
-
-        TerminalBuilder terminalBuilder = new TerminalBuilder(darkConfig);
-        TerminalTab terminal = terminalBuilder.newTerminal();
-
-        terminalTabPane.getTabs().add(terminal);
-        terminal.onTerminalFxReady(() -> {
-            terminal.getTerminal().command("ls -l");
-        });
+//        TerminalConfig darkConfig = new TerminalConfig();
+//        darkConfig.setBackgroundColor(Color.rgb(30, 32, 48));
+//        darkConfig.setForegroundColor(Color.rgb(230, 248, 255));
+//        darkConfig.setCursorColor(Color.rgb(230, 45, 80));
+//
+//        TerminalBuilder terminalBuilder = new TerminalBuilder(darkConfig);
+//        TerminalTab terminal = terminalBuilder.newTerminal();
+//
+//        terminalTabPane.getTabs().add(terminal);
+//        terminal.onTerminalFxReady(() -> {
+//            terminal.getTerminal().command("ls -l");
+//        });
     }
 
     @FXML
@@ -78,9 +76,9 @@ public class MainController {
         File selectedDirectory = directoryChooser.showDialog(null);
         if (selectedDirectory != null) {
             File rootDirectory = new File(selectedDirectory.getAbsolutePath());
-            DirectoryTreeBuilder directoryTreeBuilder = new DirectoryTreeBuilder();
-            TreeItem<File> rootNode = directoryTreeBuilder.createNode(rootDirectory);
-            directoryTree.setRoot(rootNode);
+            DirectoryTree directoryTree = new DirectoryTree();
+            TreeItem<File> rootNode = directoryTree.createNode(rootDirectory);
+            this.directoryTree.setRoot(rootNode);
         }
     }
 }

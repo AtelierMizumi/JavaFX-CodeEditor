@@ -13,8 +13,12 @@ module com.editor.texteditor {
 
     opens com.editor.texteditor to javafx.fxml;
     exports com.editor.texteditor;
-    exports com.editor.texteditor.utils;
-    opens com.editor.texteditor.utils to javafx.fxml;
-    exports com.editor.texteditor.syntax;
-    opens com.editor.texteditor.syntax to javafx.fxml;
+    exports com.editor.texteditor.others.utils;
+    opens com.editor.texteditor.others.utils to javafx.fxml;
+    exports com.editor.texteditor.others.syntax;
+    opens com.editor.texteditor.others.syntax to javafx.fxml;
+    exports com.editor.texteditor.controllers;
+    opens com.editor.texteditor.controllers to javafx.fxml;
+    exports com.editor.texteditor.models;
+    opens com.editor.texteditor.models to javafx.fxml;
 }

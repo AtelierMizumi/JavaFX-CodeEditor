@@ -1,4 +1,4 @@
-package com.editor.texteditor.model;
+package com.editor.texteditor.models;
 
 import java.io.File;
 

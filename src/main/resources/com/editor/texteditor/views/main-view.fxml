@@ -16,12 +16,12 @@
             <SplitPane dividerPositions="0.4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1920.0">
               <items>
                   <TreeView fx:id="directoryTree" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
-                  <TabPane id="codeEditorTabPane" fx:id="codeEditorTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@assets/styles/catppuccin-machiatto-dark.css" tabClosingPolicy="UNAVAILABLE" />
+                  <TabPane id="codeEditorTabPane" fx:id="codeEditorTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../assets/styles/catppuccin-machiatto-dark.css" tabClosingPolicy="UNAVAILABLE" />
               </items>
             </SplitPane>
             <TitledPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Terminal Emulator">
                <content>
-                  <TabPane id="TerminalTabPane" fx:id="terminalTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@assets/styles/catppuccin-machiatto-dark.css" tabClosingPolicy="UNAVAILABLE" />
+                  <TabPane id="TerminalTabPane" fx:id="terminalTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../assets/styles/catppuccin-machiatto-dark.css" tabClosingPolicy="UNAVAILABLE" />
                </content>
             </TitledPane>
          </items>

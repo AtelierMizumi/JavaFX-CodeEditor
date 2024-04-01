@@ -1,6 +1,6 @@
-package com.editor.texteditor;
+package com.editor.texteditor.models;
 
-import com.editor.texteditor.syntax.AutoComplete;
+import com.editor.texteditor.others.syntax.AutoComplete;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.editor.texteditor.syntax.SyntaxUtils.computeHighlighting;
+import static com.editor.texteditor.others.syntax.SyntaxUtils.computeHighlighting;
 import static javafx.geometry.Pos.CENTER_LEFT;
 
 public class CodeEditor extends CodeArea {

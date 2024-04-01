@@ -1,4 +1,4 @@
-.root, TreeView, CodeEditor {
+.root, TreeView {
     -fx-font-size: 12pt;
     -fx-background-color: #1e2030;
 }
@@ -7,10 +7,19 @@
     -fx-background-color: #494d64;
 }
 
-#codeEditorTabPane .tab-pane {
-    -fx-background-image: url('/com/editor/texteditor/background.png');
+CodeEditor {
+    -fx-font-size: 16pt;
+    -fx-background-color: #1e2030;
+    -fx-background-image: url('../marisa-fumo.png');
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: bottom right;
+    -fx-background-size: 25%;
+}
+
+#codeEditorTabPane {
+    -fx-background-color: #1e2030;
+    -fx-background-image: url('../background.png');
+    -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
 
@@ -27,6 +36,10 @@
 .code-editor, .lineno, .tree-cell, .tab, .tab-label {
     -fx-background-color: #1e2030;
     -fx-text-fill: #cad3f5;
+}
+
+.CodeEditor {
+    -fx-background-color: #1e2030;
 }
 
 .menu-bar {

@@ -1,4 +1,4 @@
-package com.editor.texteditor.utils;
+package com.editor.texteditor.others.utils;
 
 @FunctionalInterface
 public interface Action {

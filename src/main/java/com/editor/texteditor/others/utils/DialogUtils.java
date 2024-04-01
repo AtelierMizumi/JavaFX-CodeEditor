@@ -1,4 +1,4 @@
-package com.editor.texteditor.utils;
+package com.editor.texteditor.others.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
