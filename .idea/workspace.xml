@@ -4,44 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible">
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/blue-archive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/marisa-fumo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/saori.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/shiroko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/views/main-view.fxml" afterDir="false" />
+    <list default="true" id="6fcc392b-89c2-483f-8f7b-2ebaeb0fb1cf" name="Changes" comment="add icons">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/FileTreeCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/c.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/cpp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/csharp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/css.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/file.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/folder-base.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/folder-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/folder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/hpp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/html.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/java.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/javaclass.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/markdown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/powershell.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons/typescript.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/CodeEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/CodeEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/FileIconProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoCommenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoCommenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoComplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/AutoImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/AutoImport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/Keywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/Keywords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/PunctuationComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/PunctuationComplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SpaceSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/SpaceSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/syntax/SyntaxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/syntax/SyntaxUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DialogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/DialogUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/DirectoryTreeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/DirectoryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/utils/OSValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/others/utils/OSValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/CodeEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/editor/texteditor/models/CodeEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/extension-icons/text-file-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/java.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/styles/catppuccin-machiatto-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/styles/catppuccin-machiatto-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/styles/catppuccin-machiatto-light.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +71,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/thuanc177/IdeaProjects/TextEditor/src/main/resources/com/editor/texteditor/assets&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/thuanc177/IdeaProjects/TextEditor/src/main/resources/com/editor/texteditor/assets/file-icons&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -103,6 +90,7 @@
       <recent name="com.editor.texteditor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets/file-icons" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor/extension-icons" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/editor/texteditor" />
@@ -164,7 +152,11 @@
       <workItem from="1711293549061" duration="3919000" />
       <workItem from="1711297521243" duration="6583000" />
       <workItem from="1711346866905" duration="5853000" />
-      <workItem from="1711954415025" duration="1123000" />
+      <workItem from="1711954415025" duration="1558000" />
+      <workItem from="1712556539305" duration="2230000" />
+      <workItem from="1712558794847" duration="3066000" />
+      <workItem from="1712633377077" duration="3591000" />
+      <workItem from="1712639104196" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -198,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711299374436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="code refracting &amp; added README.MD">
+      <option name="closed" value="true" />
+      <created>1711955612581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711955612581</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +221,8 @@
     <MESSAGE value="Added TabPane and spawner for multi-tab editing, added basic read-write operation" />
     <MESSAGE value="added code highlighting and simple css structure for styling with custom theme" />
     <MESSAGE value="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried to add terminal emulator support but failed, project wasn't matained for a year, prob version mismatch, will clone a branch to fix if possible" />
+    <MESSAGE value="code refracting &amp; added README.MD" />
+    <MESSAGE value="add icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add icons" />
   </component>
 </project>

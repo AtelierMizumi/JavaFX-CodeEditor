@@ -10,6 +10,7 @@ module com.editor.texteditor {
     requires org.slf4j;
     requires com.sun.jna;
     requires pty4j;
+    requires batik.transcoder;
 
     opens com.editor.texteditor to javafx.fxml;
     exports com.editor.texteditor;

@@ -1,22 +1,25 @@
 package com.editor.texteditor.models;
 
 import com.editor.texteditor.others.syntax.AutoComplete;
+import javafx.event.EventHandler;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import javafx.stage.FileChooser;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static com.editor.texteditor.others.syntax.SyntaxUtils.computeHighlighting;
 import static javafx.geometry.Pos.CENTER_LEFT;
@@ -48,7 +51,45 @@ public class CodeEditor extends CodeArea {
             codeArea.replaceText(0, 0, content);
 
             // Listen for key press events
-            codeArea.setOnKeyPressed(event -> handleKeyPress(event, filePath, codeArea));
+            // codeArea.setOnKeyPressed(event -> handleKeyPress(event, filePath, codeArea));
+
+            List<KeyCombination> keyCombinations = new ArrayList<>();
+            keyCombinations.add(new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN));
+            keyCombinations.add(new KeyCodeCombination(KeyCode.O, KeyCombination.CONTROL_DOWN));
+
+            codeArea.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent event) {
+                    for (KeyCombination keyCodeComb : keyCombinations) {
+                        if (keyCodeComb.match(event)) {
+                            handleKeyCombination(keyCodeComb);
+                            event.consume(); // Prevent further handling of the event
+                            return;
+                        }
+                    }
+                }
+                public void handleKeyCombination(KeyCombination keyCodeComb) {
+                    // Handle the key combination accordingly
+                    if (keyCodeComb.equals(new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN))) {
+                        saveFile(filePath, codeArea);
+                    } else if (keyCodeComb.equals(new KeyCodeCombination(KeyCode.O, KeyCombination.CONTROL_DOWN))) {
+                        openFile();
+                    }
+                }
+
+                private void openFile() {
+                    FileChooser fileChooser = new FileChooser();
+                    fileChooser.setTitle("Open File");
+                    File file = fileChooser.showOpenDialog(null);
+                    // Check if a file was selected
+                    if (file != null) {
+                        openFileInNewTab(file.getAbsoluteFile().toPath(), codeEditorTabPane);
+                        System.out.println("Selected file: " + file.getAbsolutePath());
+                    }
+                }
+            });
+
+
 
             Tab newTab = createTab(filePath, codeArea);
             codeEditorTabPane.getTabs().add(newTab);
@@ -137,6 +178,9 @@ public class CodeEditor extends CodeArea {
     public void saveFile(Path filePath, CodeArea codeArea) {
         try {
             Files.writeString(filePath, codeArea.getText());
+            Alert info = new Alert(Alert.AlertType.INFORMATION);
+            info.setHeaderText("File saved successfully.");
+            info.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
         }
